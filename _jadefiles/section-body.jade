@@ -1,0 +1,30 @@
+section.body
+  .flex.flex--center
+    .col-1280
+    
+      |{% for post in site.posts limit: 1 %} 
+      .info-container
+        .post-title.item-card.item-card-padding
+          h4 {{post.title}}
+          p {{post.sub-title}}
+          p {{post.category}}
+          p {{post.date}} | {{post.location}}
+          p {{post.tags}}
+          ul
+            li: a.youtube(href="#youtube") <i class="fa fa-youtube-play fa-lg"></i>
+            li: a.facebook(href="#facebook") <i class="fa fa-facebook-square fa-lg"></i>
+            li: a.instagram(href="#instagram") <i class="fa fa-instagram fa-lg"></i>
+            li: a.snapchat(href="#snapchat") <i class="fa fa-snapchat-square fa-lg"></i>
+            li: a.link(href="#link") <i class="fa fa-envelope-square fa-lg"></i> 
+        hr
+        h2 {{post.content}}
+        hr
+        h2 comments werkt het nu?
+        {% include disqus.html %}
+      
+
+      .video-container
+        h2 ads section
+        hr
+        a(href="localhost:3000{{post.url}}") next videos section
+      |{% endfor %} 

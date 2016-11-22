@@ -1,0 +1,22 @@
+mixin nav-content()
+  //ul
+    //li: a(href="#concept") CONCEPT
+    //li: a(href="/branding.html") BRANDING
+    //li: a(href="#promo") ABOUT
+    //li: a.youtube(href="#youtube") <i class="fa fa-youtube-play fa-lg"></i>
+    //li: a.facebook(href="#facebook") <i class="fa fa-facebook-square fa-lg"></i>
+    //li: a.instagram(href="#instagram") <i class="fa fa-instagram fa-lg"></i>
+    //li: a.snapchat(href="#snapchat") <i class="fa fa-snapchat-square fa-lg"></i>
+    //li: a.mail(href="#mail") <i class="fa fa-envelope-square fa-lg"></i>    
+
+.mobile-nav
+  +nav-content()
+
+header
+  .header-position.active
+    div.logo
+    
+    nav.site-nav
+      +nav-content()
+    
+    .mobile-nav-toggle: span
