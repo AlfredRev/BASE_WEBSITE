@@ -1,30 +1,49 @@
 section.body
   .flex.flex--center
     .col-1280
-    
       |{% for post in site.posts limit: 1 %} 
-      .info-container
+      .content-container.content-main-col
         .post-title.item-card.item-card-padding
           h4 {{post.title}}
           p {{post.sub-title}}
-          p {{post.category}}
-          p {{post.date}} | {{post.location}}
-          p {{post.tags}}
+          p.allcaps.no-margin.post-category {{post.category}}
+          p.no-margin {{post.date| date: '%B %d, %Y'}} | {{post.location}}
+          //p TAGS: {{post.tags}}
+          hr.content-separation-line
           ul
+            li: a.social-follow FOLLOW US ON SOCIAL:
             li: a.youtube(href="#youtube") <i class="fa fa-youtube-play fa-lg"></i>
             li: a.facebook(href="#facebook") <i class="fa fa-facebook-square fa-lg"></i>
             li: a.instagram(href="#instagram") <i class="fa fa-instagram fa-lg"></i>
             li: a.snapchat(href="#snapchat") <i class="fa fa-snapchat-square fa-lg"></i>
             li: a.link(href="#link") <i class="fa fa-envelope-square fa-lg"></i> 
-        hr
-        h2 {{post.content}}
-        hr
-        h2 comments werkt het nu?
-        {% include disqus.html %}
-      
-
-      .video-container
-        h2 ads section
-        hr
-        a(href="localhost:3000{{post.url}}") next videos section
+        .item-card.item-card-padding
+          |{{post.content}}
+          
+        .item-card.item-card-padding
+          h4 Feel free to leave a comment (L)
+          |{% include disqus.html %}
       |{% endfor %} 
+      
+      
+      .sidebar
+        .sidebar-contents.sidebar-gutter.item-card.item-card-padding 
+          .sidebar-section
+            h4 Watch more
+          hr.sidebar-separation-line
+          .sidebar-section
+            .sidebar-body
+              ul
+                |{% for post in site.posts limit: 6 offset: 1 %}
+                li: .post-list-item
+                  .related-post-dismissable
+                    .content-wrapper
+                      a(href="{{post.url}}")
+                        p.title {{post.title}}
+                        p.sub-info.allcaps {{post.category}}
+                        p.sub-info {{post.date| date: '%B %d, %Y'}}
+                    .thumb-wrapper              
+                      a(href="{{post.url}}")
+                        img(href="{{post.url}}" src="{{post.thumbnail}}")
+                |{% endfor %} 
+          hr.sidebar-separation-line
