@@ -1,0 +1,19 @@
+section.body
+  |{% for post in site.posts limit: 1 %} 
+  .sidebar
+    .sidebar-contents.sidebar-gutter.item-card.item-card-padding
+      .sidebar-section
+        h4 ads section
+      hr.sidebar-separation-line
+      .sidebar-section
+        .sidebar-body
+          ul
+            li: .post-list-item
+              .related-post-dismissable
+                .content-wrapper
+                  a(href="{{post.link}}")
+                    span.title {{post.title}}
+                    span.sub-info {{post.date| date: '%B %d, %Y'}}
+                .thumb-wrapper              
+                  img(src="{{post.thumbnail}}" frameborder="0" allowfullscreen)
+  |{% endfor %}
