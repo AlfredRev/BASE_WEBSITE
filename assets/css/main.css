@@ -847,7 +847,7 @@ nav.tn-nav-wrap {
             transform: translateY(0%); } }
 
 section.body {
-  background-color: transparent;
+  background-color: #F2F2F2;
   width: 100%;
   display: block;
   overflow-x: hidden;
@@ -915,6 +915,14 @@ section.body {
     list-style: none;
     display: block;
     list-style-type: disc; }
+  section.body .youtube {
+    color: #b31217; }
+  section.body .facebook {
+    color: #3b5998; }
+  section.body .instagram {
+    color: #c32aa3; }
+  section.body .snapchat {
+    color: #fffc00; }
   section.body .social-follow {
     font-weight: 700; }
   section.body .post-list-item {
