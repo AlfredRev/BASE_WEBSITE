@@ -915,16 +915,6 @@ section.body {
     list-style: none;
     display: block;
     list-style-type: disc; }
-  section.body .youtube {
-    color: #b31217; }
-  section.body .facebook {
-    color: #3b5998; }
-  section.body .instagram {
-    color: #c32aa3; }
-  section.body .snapchat {
-    color: #fffc00; }
-  section.body .social-follow {
-    font-weight: 700; }
   section.body .post-list-item {
     position: relative; }
     section.body .post-list-item .title {
@@ -1191,3 +1181,18 @@ section.hero {
     margin-left: 10px;
     display: inline-block;
     vertical-align: middle; }
+
+.social-list .youtube {
+  color: #b31217; }
+
+.social-list .facebook {
+  color: #3b5998; }
+
+.social-list .instagram {
+  color: #c32aa3; }
+
+.social-list .snapchat {
+  color: #fffc00; }
+
+.social-list .social-follow {
+  font-weight: 700; }

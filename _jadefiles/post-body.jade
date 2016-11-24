@@ -9,13 +9,7 @@ section.body
           p.no-margin {{page.date| date: '%B %d, %Y'}} | {{page.location}}
           //p TAGS: {{post.tags}}
           hr.content-separation-line
-          ul
-            li: a.social-follow FOLLOW US ON SOCIAL:
-            li: a.youtube(href="#youtube") <i class="fa fa-youtube-play fa-lg"></i>
-            li: a.facebook(href="#facebook") <i class="fa fa-facebook-square fa-lg"></i>
-            li: a.instagram(href="#instagram") <i class="fa fa-instagram fa-lg"></i>
-            li: a.snapchat(href="#snapchat") <i class="fa fa-snapchat-square fa-lg"></i>
-            li: a.link(href="#link") <i class="fa fa-envelope-square fa-lg"></i> 
+          {% include social-list.html %}
         .item-card.item-card-padding
           |{{ page.content }}
           
