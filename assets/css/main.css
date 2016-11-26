@@ -986,6 +986,28 @@ section.body {
         font-weight: 700;
         color: black;
         text-transform: uppercase; }
+  @media (max-width: 1080px) {
+    section.body .sidebar-contents {
+      min-height: 520px;
+      min-width: 320px; } }
+  @media (max-width: 960px) {
+    section.body .content-container {
+      width: 480px; }
+    section.body .sidebar {
+      margin-left: 490px; } }
+  @media (max-width: 800px) {
+    section.body .col-1280 {
+      display: block; }
+    section.body .sidebar-contents {
+      min-width: 480px; }
+    section.body .push-right {
+      margin-left: 0; } }
+  @media (max-width: 480px) {
+    section.body .content-container {
+      width: auto; }
+    section.body .sidebar-contents {
+      min-width: 320px;
+      max-width: 480px; } }
 
 section.hero {
   padding-top: 0;
@@ -1145,8 +1167,6 @@ section.hero {
   max-width: 1280px; }
 
 @media (max-width: 640px) {
-  .home-sections .flex {
-    display: block; }
   .col-1 {
     width: 100%; }
   .col-50 {
