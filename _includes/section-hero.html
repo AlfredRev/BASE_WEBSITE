@@ -1,4 +1,4 @@
-<section class="hero"><div class="flex flex--center">{% for post in site.posts limit: 1 %}<div class="hero-bundle"><iframe src="{{post.link}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div><!--a(style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").hero-thumb--><!--a(href="{{post.url}}").hero-meta//.name {{post.title}}
+<section class="hero"><div class="flex flex--center">{% for post in site.posts limit: 1 %}<div class="hero-bundle"><iframe src="{{post.link}}" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><!--a(style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").hero-thumb--><!--a(href="{{post.url}}").hero-meta//.name {{post.title}}
 //.prijs {{post.prijs}}   -->{% endfor %}<!--.col-100//.bg-overlay
 //|{% for post in site.posts limit: 1 %}
 //.hero-container

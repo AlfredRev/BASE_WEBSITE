@@ -3,7 +3,7 @@ section.hero
   
     |{% for post in site.posts limit: 1 %}
     .hero-bundle
-      iframe(src="{{post.link}}" frameborder="0" allowfullscreen)
+      iframe(src="{{post.link}}" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen")
     //a(style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").hero-thumb
     //a(href="{{post.url}}").hero-meta
       //.name {{post.title}}
